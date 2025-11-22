@@ -1,10 +1,3 @@
-/**
-* Template Name: MyResume
-* Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
 (function() {
   "use strict";
@@ -227,3 +220,35 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+// Certificate Modal Functions
+function openCertificateModal(imageSrc) {
+    const modal = document.getElementById('certificateModal');
+    const modalImg = document.getElementById('modalCertImage');
+    
+    modal.classList.add('active');
+    modalImg.src = imageSrc;
+    
+    // Prevent body scroll when modal is open
+    document.body.style.overflow = 'hidden';
+}
+
+function closeCertificateModal() {
+    const modal = document.getElementById('certificateModal');
+    modal.classList.remove('active');
+    
+    // Restore body scroll
+    document.body.style.overflow = 'auto';
+}
+
+// Close modal with ESC key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeCertificateModal();
+    }
+});
+
+// Prevent modal close when clicking on image
+document.getElementById('modalCertImage').addEventListener('click', function(event) {
+    event.stopPropagation();
+});
