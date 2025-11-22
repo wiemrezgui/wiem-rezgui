@@ -801,104 +801,317 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Portfolio Section
 --------------------------------------------------------------*/
-.portfolio .portfolio-filters {
-  padding: 0;
-  margin: 0 auto 20px auto;
-  list-style: none;
-  text-align: center;
+/* Portfolio Section */
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
 }
 
-.portfolio .portfolio-filters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 8px 20px 10px 20px;
-  margin: 0;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 1;
-  margin-bottom: 5px;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
-  font-family: var(--heading-font);
+.portfolio-filters li {
+    padding: 10px 25px;
+    border: 2px solid var(--accent-color);
+    background: transparent;
+    color: var(--accent-color);
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.portfolio .portfolio-filters li:hover,
-.portfolio .portfolio-filters li.filter-active {
-  color: var(--contrast-color);
-  background-color: var(--accent-color);
+.portfolio-filters li:hover,
+.portfolio-filters li.filter-active {
+    background: var(--accent-color);
+    color: white;
 }
 
-.portfolio .portfolio-filters li:first-child {
-  margin-left: 0;
+.portfolio-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    height: 100%;
 }
 
-.portfolio .portfolio-filters li:last-child {
-  margin-right: 0;
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(32, 201, 151, 0.15);
 }
 
-@media (max-width: 575px) {
-  .portfolio .portfolio-filters li {
-    font-size: 14px;
-    margin: 0 0 10px 0;
-  }
+.portfolio-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #f8f9fa;
 }
 
-.portfolio .portfolio-item {
-  position: relative;
-  overflow: hidden;
+.portfolio-image img,
+.portfolio-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-.portfolio .portfolio-item .portfolio-info {
-  opacity: 0;
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: -100%;
-  z-index: 3;
-  transition: all ease-in-out 0.5s;
-  background: color-mix(in srgb, var(--background-color), transparent 10%);
-  padding: 15px;
+.portfolio-card:hover .portfolio-image img,
+.portfolio-card:hover .portfolio-image video {
+    transform: scale(1.1);
 }
 
-.portfolio .portfolio-item .portfolio-info h4 {
-  font-size: 18px;
-  font-weight: 600;
-  padding-right: 50px;
+.placeholder-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-.portfolio .portfolio-item .portfolio-info p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  font-size: 14px;
-  margin-bottom: 0;
-  padding-right: 50px;
+.placeholder-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
 }
 
-.portfolio .portfolio-item .portfolio-info .preview-link,
-.portfolio .portfolio-item .portfolio-info .details-link {
-  position: absolute;
-  right: 50px;
-  font-size: 24px;
-  top: calc(50% - 14px);
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  transition: 0.3s;
-  line-height: 0;
+.placeholder-image p {
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    padding: 0 1rem;
 }
 
-.portfolio .portfolio-item .portfolio-info .preview-link:hover,
-.portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: var(--accent-color);
+.portfolio-info {
+    padding: 1.5rem;
 }
 
-.portfolio .portfolio-item .portfolio-info .details-link {
-  right: 14px;
-  font-size: 28px;
+.portfolio-info h4 {
+    color: #212529;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
 }
 
-.portfolio .portfolio-item:hover .portfolio-info {
-  opacity: 1;
-  bottom: 0;
+.portfolio-info p {
+    color: #6c757d;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-badge {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.portfolio-badge.fullstack {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.portfolio-badge.uiux {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.portfolio-badge.ai {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+}
+
+/* Video hover effect */
+.portfolio-video {
+    pointer-events: none;
+}
+
+/* Project Modal */
+.project-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    overflow-y: auto;
+    animation: fadeIn 0.3s;
+}
+
+.project-modal.active {
+    display: block;
+}
+
+.modal-content-wrapper {
+    position: relative;
+    background: white;
+    margin: 3% auto;
+    max-width: 1000px;
+    border-radius: 20px;
+    animation: slideDown 0.3s;
+}
+
+.modal-close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: var(--accent-color);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10000;
+    transition: all 0.3s;
+}
+
+.modal-close:hover {
+    transform: rotate(90deg) scale(1.1);
+    background: none;
+}
+
+.modal-body {
+    padding: 3rem;
+}
+
+.modal-header {
+    margin-bottom: 2rem;
+}
+
+.modal-header h2 {
+    color: #212529;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.modal-header .project-date {
+    color: #6c757d;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.modal-media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.modal-media-grid img,
+.modal-media-grid video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.modal-description {
+    margin: 2rem 0;
+}
+
+.modal-description h3 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.modal-description ul {
+    list-style: none;
+    padding: 0;
+}
+
+.modal-description ul li {
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+    position: relative;
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+.modal-description ul li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.modal-technologies {
+    margin-top: 2rem;
+}
+
+.modal-technologies h3 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.tech-tag {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-content-wrapper {
+        margin: 10% 5%;
+        max-width: 100%;
+    }
+    
+    .modal-body {
+        padding: 2rem 1.5rem;
+    }
+    
+    .modal-media-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-close {
+        top: 10px;
+        right: 10px;
+    }
 }
 
 /*--------------------------------------------------------------

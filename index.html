@@ -362,16 +362,15 @@
       </div>
 
     </section><!-- /Resume Section -->
-
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Portfolio</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-          consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-          in iste officiis commodi quidem hic quas.</p>
+        <p>Explore my diverse range of projects spanning full-stack development, UI/UX design, and AI solutions. Each
+          project represents a unique challenge and showcases my technical expertise and creative problem-solving
+          abilities.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -380,124 +379,116 @@
 
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Card</li>
-            <li data-filter=".filter-branding">Web</li>
+            <li data-filter=".filter-fullstack">Full Stack</li>
+            <li data-filter=".filter-uiux">UI/UX</li>
+            <li data-filter=".filter-ai">AI</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg" title="App 1"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
+            <!-- Project 1: EOP -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-fullstack">
+              <div class="portfolio-card" onclick="openProjectModal('eop')">
+                <div class="portfolio-image">
+                  <div class="placeholder-image">
+                    <p>Enterprise Operations Platform</p>
+                  </div>
+                </div>
+                <div class="portfolio-info">
+                  <h4>Enterprise Operations Platform (EOP)</h4>
+                  <p>Microservices Architecture</p>
+                  <span class="portfolio-badge fullstack">Full Stack</span>
+                </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg" title="Product 1"
-                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
+            <!-- Project 2: Loyalty App -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-fullstack">
+              <div class="portfolio-card" onclick="openProjectModal('loyalty')">
+                <div class="portfolio-image">
+                  <video class="portfolio-video" muted loop>
+                    <source src="assets/img/projects/loyalty/video.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="portfolio-info">
+                  <h4>Loyalty Application</h4>
+                  <p>Stamp-based rewards system</p>
+                  <span class="portfolio-badge fullstack">Full Stack</span>
+                </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 1</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg" title="Branding 1"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
+            <!-- Project 3: Training Center -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-fullstack">
+              <div class="portfolio-card" onclick="openProjectModal('training')">
+                <div class="portfolio-image">
+                  <video class="portfolio-video" muted loop>
+                    <source src="assets/img/projects/training/video.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="portfolio-info">
+                  <h4>Training Center Management</h4>
+                  <p>Complete enrollment system</p>
+                  <span class="portfolio-badge fullstack">Full Stack</span>
+                </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
+            <!-- Project 4: Playlist AI -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai">
+              <div class="portfolio-card" onclick="openProjectModal('playlist-ai')">
+                <div class="portfolio-image">
+                  <video class="portfolio-video" muted loop>
+                    <source src="assets/img/projects/playlist-ai/video.mp4" type="video/mp4">
+                  </video>                </div>
+                <div class="portfolio-info">
+                  <h4>Playlist AI Generator</h4>
+                  <p>Emotion-based music generation</p>
+                  <span class="portfolio-badge ai">AI</span>
+                </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg" title="Product 2"
-                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
+            <!-- Project 5: Co-working Space -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-uiux">
+              <div class="portfolio-card" onclick="openProjectModal('coworking')">
+                <div class="portfolio-image">
+                  <video class="portfolio-video" muted loop>
+                    <source src="assets/img/projects/coworking/video.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="portfolio-info">
+                  <h4>Co-Working Space App</h4>
+                  <p>Mobile app for WeStudy</p>
+                  <span class="portfolio-badge uiux">UI/UX</span>
+                </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg" title="Branding 2"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
+            <!-- Project 6: Medical Quiz -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-uiux">
+              <div class="portfolio-card" onclick="openProjectModal('quiz')">
+                <div class="portfolio-image">
+                  <img src="assets/img/projects/quiz/mockup1.jpg" alt="Medical Quiz App">
+                </div>
+                <div class="portfolio-info">
+                  <h4>Medical Quiz App</h4>
+                  <p>Quiz app for medical students</p>
+                  <span class="portfolio-badge uiux">UI/UX</span>
+                </div>
               </div>
             </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3"
-                  data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg" title="Product 3"
-                  data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
-              <img src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit</p>
-                <a href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg" title="Branding 2"
-                  data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                    class="bi bi-zoom-in"></i></a>
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i
-                    class="bi bi-link-45deg"></i></a>
+            <!-- Project 8: TeachMart -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-uiux">
+              <div class="portfolio-card" onclick="openProjectModal('teachmart')">
+                <div class="portfolio-image">
+                  <img src="assets/img/projects/teachmart/screen1.jpg" alt="TeachMart">
+                </div>
+                <div class="portfolio-info">
+                  <h4>TeachMart</h4>
+                  <p>Online courses platform</p>
+                  <span class="portfolio-badge uiux">UI/UX</span>
+                </div>
               </div>
             </div><!-- End Portfolio Item -->
 
@@ -509,79 +500,93 @@
 
     </section><!-- /Portfolio Section -->
 
-    <!-- Certificates Section -->
-<section id="certificates" class="certificates section">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Certificates</h2>
-    <p>Professional certifications and achievements that validate my technical expertise and commitment to continuous learning.</p>
-  </div><!-- End Section Title -->
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="row certificates-content">
-      
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="certificate-card" onclick="openCertificateModal('assets/img/certificats/cert-data-analytics.jpg')">
-          <div class="certificate-image">
-            <img src="assets/img/certificats/cert-data-analytics.jpg" alt="Data Analytics Essentials">
-            <div class="certificate-overlay">
-              <span class="view-icon"> <img src="assets/img/zoom.png" alt="zoom"></span>
-            </div>
-          </div>
-          <div class="certificate-info">
-            <h4>Data Analytics Essentials</h4>
-            <p>Cisco Networking Academy</p>
-            <span class="certificate-date">November 2025</span>
-          </div>
+    <!-- Project Modal -->
+    <div id="projectModal" class="project-modal" onclick="closeProjectModal()">
+      <div class="modal-content-wrapper" onclick="event.stopPropagation()">
+        <span class="modal-close" onclick="closeProjectModal()">&times;</span>
+        <div class="modal-body" id="projectModalBody">
+          <!-- Content will be inserted here by JavaScript -->
         </div>
       </div>
-
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="certificate-card" onclick="openCertificateModal('assets/img/certificats/cert-python-datascience.jpg')">
-          <div class="certificate-image">
-            <img src="assets/img/certificats/cert-python-datascience.jpg" alt="Python for Data Science">
-            <div class="certificate-overlay">
-              <span class="view-icon"><img src="assets/img/zoom.png" alt="zoom"></span>
-            </div>
-          </div>
-          <div class="certificate-info">
-            <h4>Python for Data Science</h4>
-            <p>CDOSS</p>
-            <span class="certificate-date">May 2025</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="certificate-card" onclick="openCertificateModal('assets/img/certificats/cert-angular-spring.jpg')">
-          <div class="certificate-image">
-            <img src="assets/img/certificats/cert-angular-spring.jpg" alt="Angular & Spring Boot">
-            <div class="certificate-overlay">
-              <span class="view-icon"><img src="assets/img/zoom.png" alt="zoom"></span>
-            </div>
-          </div>
-          <div class="certificate-info">
-            <h4>Angular & Spring Boot</h4>
-            <p>CrocoCoder Academy</p>
-            <span class="certificate-date">January 2024</span>
-          </div>
-        </div>
-      </div>
-
     </div>
 
-  </div>
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates section">
 
-</section><!-- /Certificates Section -->
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Certificates</h2>
+        <p>Professional certifications and achievements that validate my technical expertise and commitment to
+          continuous learning.</p>
+      </div><!-- End Section Title -->
 
-<!-- Certificate Modal -->
-<div id="certificateModal" class="certificate-modal" onclick="closeCertificateModal()">
-  <span class="modal-close">&times;</span>
-  <img class="modal-certificate-image" id="modalCertImage" src="" alt="Certificate">
-  <div class="modal-caption" id="modalCaption"></div>
-</div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row certificates-content">
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="certificate-card"
+              onclick="openCertificateModal('assets/img/certificats/cert-data-analytics.jpg')">
+              <div class="certificate-image">
+                <img src="assets/img/certificats/cert-data-analytics.jpg" alt="Data Analytics Essentials">
+                <div class="certificate-overlay">
+                  <span class="view-icon"> <img src="assets/img/zoom.png" alt="zoom"></span>
+                </div>
+              </div>
+              <div class="certificate-info">
+                <h4>Data Analytics Essentials</h4>
+                <p>Cisco Networking Academy</p>
+                <span class="certificate-date">November 2025</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="certificate-card"
+              onclick="openCertificateModal('assets/img/certificats/cert-python-datascience.jpg')">
+              <div class="certificate-image">
+                <img src="assets/img/certificats/cert-python-datascience.jpg" alt="Python for Data Science">
+                <div class="certificate-overlay">
+                  <span class="view-icon"><img src="assets/img/zoom.png" alt="zoom"></span>
+                </div>
+              </div>
+              <div class="certificate-info">
+                <h4>Python for Data Science</h4>
+                <p>CDOSS</p>
+                <span class="certificate-date">May 2025</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="certificate-card"
+              onclick="openCertificateModal('assets/img/certificats/cert-angular-spring.jpg')">
+              <div class="certificate-image">
+                <img src="assets/img/certificats/cert-angular-spring.jpg" alt="Angular & Spring Boot">
+                <div class="certificate-overlay">
+                  <span class="view-icon"><img src="assets/img/zoom.png" alt="zoom"></span>
+                </div>
+              </div>
+              <div class="certificate-info">
+                <h4>Angular & Spring Boot</h4>
+                <p>CrocoCoder Academy</p>
+                <span class="certificate-date">January 2024</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Certificates Section -->
+
+    <!-- Certificate Modal -->
+    <div id="certificateModal" class="certificate-modal" onclick="closeCertificateModal()">
+      <span class="modal-close">&times;</span>
+      <img class="modal-certificate-image" id="modalCertImage" src="" alt="Certificate">
+      <div class="modal-caption" id="modalCaption"></div>
+    </div>
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
