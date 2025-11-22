@@ -814,7 +814,7 @@ section,
 }
 
 .portfolio-filters li {
-    padding: 10px 25px;
+    padding: 8px 30px;
     border: 2px solid var(--accent-color);
     background: transparent;
     color: var(--accent-color);
